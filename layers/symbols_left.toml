@@ -1,0 +1,66 @@
+[layer]
+name = "Symbols Left"
+split_after_row = 3
+
+# Row 1: ! @ #
+[[row]]
+keys = [
+  { label = "!", keycode = 2 },
+  { label = "@", keycode = 3 },
+  { label = "#", keycode = 4 }
+]
+
+# Row 2: $ % &
+[[row]]
+keys = [
+  { label = "$", keycode = 5 },
+  { label = "%", keycode = 6 },
+  { label = "&", keycode = 8 }
+]
+
+# Row 3: [ { (
+[[row]]
+keys = [
+  { label = "[", keycode = 26 },
+  { label = "{", keycode = 26 },
+  { label = "(", keycode = 10 }
+]
+
+# Row 4: < ; Tab
+[[row]]
+keys = [
+  { label = "<", keycode = 51 },
+  { label = ";", keycode = 39 },
+  { label = "Tab", keycode = 15 }
+]
+
+# Row 5: ` ~ \
+[[row]]
+keys = [
+  { label = "`", keycode = 41 },
+  { label = "~", keycode = 41 },
+  { label = "\\", keycode = 43 }
+]
+
+# Row 6: | - _
+[[row]]
+keys = [
+  { label = "|", keycode = 43 },
+  { label = "-", keycode = 12 },
+  { label = "_", keycode = 12 }
+]
+
+# Row 7: ' " ,
+[[row]]
+keys = [
+  { label = "'", keycode = 40 },
+  { label = "\"", keycode = 40 },
+  { label = ",", keycode = 51 }
+]
+
+# Row 8: Base layer + Space
+[[row]]
+keys = [
+  { label = "Base", layer_switch = { layer = "Base", activation = "Toggle" } },
+  { label = "Space", keycode = 57, width = 2.0 }
+]

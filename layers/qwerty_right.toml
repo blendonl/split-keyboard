@@ -1,0 +1,66 @@
+[layer]
+name = "QWERTY Right"
+split_after_row = 3
+
+# Row 1: Numbers 6-8
+[[row]]
+keys = [
+  { label = "6", keycode = 7 },
+  { label = "7", keycode = 8 },
+  { label = "8", keycode = 9 }
+]
+
+# Row 2: Numbers 9-0 + Tab
+[[row]]
+keys = [
+  { label = "9", keycode = 10 },
+  { label = "0", keycode = 11 },
+  { label = "Tab", keycode = 15 }
+]
+
+# Row 3: YUI
+[[row]]
+keys = [
+  { label = "y", keycode = 21 },
+  { label = "u", keycode = 22 },
+  { label = "i", keycode = 23 }
+]
+
+# Row 4: OP + Backspace
+[[row]]
+keys = [
+  { label = "o", keycode = 24 },
+  { label = "p", keycode = 25 },
+  { label = "⌫", keycode = 14 }
+]
+
+# Row 5: HJK
+[[row]]
+keys = [
+  { label = "h", keycode = 35 },
+  { label = "j", keycode = 36 },
+  { label = "k", keycode = 37 }
+]
+
+# Row 6: L + Enter
+[[row]]
+keys = [
+  { label = "l", keycode = 38 },
+  { label = "Enter", keycode = 28, width = 2.0 }
+]
+
+# Row 7: BNM
+[[row]]
+keys = [
+  { label = "b", keycode = 48 },
+  { label = "n", keycode = 49 },
+  { label = "m", keycode = 50 }
+]
+
+# Row 8: Punctuation + Layer switches
+[[row]]
+keys = [
+  { label = ",", keycode = 51 },
+  { label = ".", keycode = 52 },
+  { label = "Num", layer_switch = { layer = "Numbers", activation = "Toggle" } }
+]

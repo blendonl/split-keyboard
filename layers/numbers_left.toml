@@ -1,0 +1,66 @@
+[layer]
+name = "Numbers Left"
+split_after_row = 3
+
+# Row 1: 7 8 9
+[[row]]
+keys = [
+  { label = "7", keycode = 8 },
+  { label = "8", keycode = 9 },
+  { label = "9", keycode = 10 }
+]
+
+# Row 2: 4 5 6
+[[row]]
+keys = [
+  { label = "4", keycode = 5 },
+  { label = "5", keycode = 6 },
+  { label = "6", keycode = 7 }
+]
+
+# Row 3: 1 2 3
+[[row]]
+keys = [
+  { label = "1", keycode = 2 },
+  { label = "2", keycode = 3 },
+  { label = "3", keycode = 4 }
+]
+
+# Row 4: 0 . Tab
+[[row]]
+keys = [
+  { label = "0", keycode = 11 },
+  { label = ".", keycode = 52 },
+  { label = "Tab", keycode = 15 }
+]
+
+# Row 5: + - *
+[[row]]
+keys = [
+  { label = "+", keycode = 13 },
+  { label = "-", keycode = 12 },
+  { label = "*", keycode = 9 }
+]
+
+# Row 6: / = Backspace
+[[row]]
+keys = [
+  { label = "/", keycode = 53 },
+  { label = "=", keycode = 13 },
+  { label = "⌫", keycode = 14 }
+]
+
+# Row 7: Empty for spacing
+[[row]]
+keys = [
+  { label = "", keycode = 57 },
+  { label = "", keycode = 57 },
+  { label = "", keycode = 57 }
+]
+
+# Row 8: Base layer + Space
+[[row]]
+keys = [
+  { label = "Base", layer_switch = { layer = "Base", activation = "Toggle" } },
+  { label = "Space", keycode = 57, width = 2.0 }
+]

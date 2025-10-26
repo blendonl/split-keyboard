@@ -1,0 +1,66 @@
+[layer]
+name = "Symbols Right"
+split_after_row = 3
+
+# Row 1: * ^ &
+[[row]]
+keys = [
+  { label = "*", keycode = 9 },
+  { label = "^", keycode = 7 },
+  { label = "&", keycode = 8 }
+]
+
+# Row 2: ( ) Backspace
+[[row]]
+keys = [
+  { label = "(", keycode = 10 },
+  { label = ")", keycode = 11 },
+  { label = "⌫", keycode = 14 }
+]
+
+# Row 3: ) ] }
+[[row]]
+keys = [
+  { label = ")", keycode = 11 },
+  { label = "]", keycode = 27 },
+  { label = "}", keycode = 27 }
+]
+
+# Row 4: > : Enter
+[[row]]
+keys = [
+  { label = ">", keycode = 52 },
+  { label = ":", keycode = 39 },
+  { label = "↵", keycode = 28 }
+]
+
+# Row 5: / = +
+[[row]]
+keys = [
+  { label = "/", keycode = 53 },
+  { label = "=", keycode = 13 },
+  { label = "+", keycode = 13 }
+]
+
+# Row 6: ? _ -
+[[row]]
+keys = [
+  { label = "?", keycode = 53 },
+  { label = "_", keycode = 12 },
+  { label = "-", keycode = 12 }
+]
+
+# Row 7: . , ;
+[[row]]
+keys = [
+  { label = ".", keycode = 52 },
+  { label = ",", keycode = 51 },
+  { label = ";", keycode = 39 }
+]
+
+# Row 8: Space + Base layer
+[[row]]
+keys = [
+  { label = "Space", keycode = 57, width = 2.0 },
+  { label = "Base", layer_switch = { layer = "Base", activation = "Toggle" } }
+]

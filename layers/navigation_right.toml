@@ -1,0 +1,63 @@
+[layer]
+name = "Navigation Right"
+split_after_row = 3
+
+# Row 1: F7 F8 F9
+[[row]]
+keys = [
+  { label = "F7", keycode = 65 },
+  { label = "F8", keycode = 66 },
+  { label = "F9", keycode = 67 }
+]
+
+# Row 2: F10 F11 F12
+[[row]]
+keys = [
+  { label = "F10", keycode = 68 },
+  { label = "F11", keycode = 87 },
+  { label = "F12", keycode = 88 }
+]
+
+# Row 3: ↑ Esc Backspace
+[[row]]
+keys = [
+  { label = "↑", keycode = 103 },
+  { label = "Esc", keycode = 1 },
+  { label = "⌫", keycode = 14 }
+]
+
+# Row 4: ← ↓ →
+[[row]]
+keys = [
+  { label = "←", keycode = 105 },
+  { label = "↓", keycode = 108 },
+  { label = "→", keycode = 106 }
+]
+
+# Row 5: Home PgUp
+[[row]]
+keys = [
+  { label = "Home", keycode = 102 },
+  { label = "PgUp", keycode = 104, width = 2.0 }
+]
+
+# Row 6: End PgDn
+[[row]]
+keys = [
+  { label = "End", keycode = 107 },
+  { label = "PgDn", keycode = 109, width = 2.0 }
+]
+
+# Row 7: Ins Del
+[[row]]
+keys = [
+  { label = "Ins", keycode = 110 },
+  { label = "Del", keycode = 111, width = 2.0 }
+]
+
+# Row 8: Space + Base layer
+[[row]]
+keys = [
+  { label = "Space", keycode = 57, width = 2.0 },
+  { label = "Base", layer_switch = { layer = "Base", activation = "Toggle" } }
+]

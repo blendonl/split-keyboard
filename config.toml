@@ -1,0 +1,72 @@
+# Split Keyboard Configuration
+
+[window]
+# Percentage of screen width for each keyboard half
+width_percent = 20
+# Keyboard layer (overlay, top, bottom, background)
+layer = "overlay"
+
+[appearance]
+# Background color (RGBA)
+bg_color = [30, 30, 30, 230]
+# Key background color
+key_color = [60, 60, 60, 255]
+# Key pressed color
+key_pressed_color = [100, 100, 100, 255]
+# Text color
+text_color = [255, 255, 255, 255]
+# Key border color
+border_color = [80, 80, 80, 255]
+# Key padding in pixels
+key_padding = 4
+# Key border width
+border_width = 1
+# Font size for key labels
+font_size = 18
+# Vertical spacing multiplier (values > 1.0 add extra space between rows, making keys shorter)
+vertical_spacing_multiplier = 1.25
+# Percentage of keyboard height to use as spacing when using split layout style
+split_spacing_percent = 10
+
+# Touch Animation Settings
+# Enable touch animations (ripple, scale, glow effects)
+enable_animations = true
+# Animation duration in milliseconds
+animation_duration_ms = 300
+# Ripple effect color (RGBA)
+ripple_color = [255, 255, 255, 100]
+# Scale amount (0.05 = 5% scale down when pressed)
+scale_amount = 0.05
+
+# Vertical Movement Settings
+# Percentage of screen height to move when arrow is clicked
+vertical_move_percent = 5
+# Size of arrow controls in pixels
+arrow_size = 45
+# Arrow color (RGBA)
+arrow_color = [100, 100, 100, 255]
+# Arrow pressed color (RGBA)
+arrow_pressed_color = [150, 150, 150, 255]
+
+[keyboard]
+# Default layout (currently only qwerty supported, but layers provide additional layouts)
+default_layout = "qwerty"
+# Number of rows
+rows = 4
+# Enable haptic feedback (requires additional setup)
+haptic_feedback = false
+# Layout style: standard (no gaps) or split (horizontal gap between rows)
+layout_style = "split"
+# Global split point: split the keyboard after this row index (0-based)
+# Can be overridden per-layer in the layer config files
+split_after_row = 3
+
+[layers]
+# Available layers: Base (QWERTY), Symbols, Navigation, Numbers
+# Layers are configured in layout files (src/layouts/*.rs)
+# Layer switching keys are defined in each layout
+# - Toggle: Press once to activate, press again to deactivate
+# - Hold: Layer active only while key is held down
+# Layer switch keys are configured in the layout files:
+#   - Left side: "Sym" (toggle), "Nav" (hold)
+#   - Right side: "Num" (toggle)

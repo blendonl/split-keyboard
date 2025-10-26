@@ -1,0 +1,67 @@
+[layer]
+name = "QWERTY Left"
+split_after_row = 3
+
+# Row 1: Numbers 1-3
+[[row]]
+keys = [
+  { label = "1", keycode = 2 },
+  { label = "2", keycode = 3 },
+  { label = "3", keycode = 4 }
+]
+
+# Row 2: Numbers 4-5 + Ctrl
+[[row]]
+keys = [
+  { label = "4", keycode = 5 },
+  { label = "5", keycode = 6 },
+  { label = "Ctrl", keycode = 29 }
+]
+
+# Row 3: QWE
+[[row]]
+keys = [
+  { label = "q", keycode = 16 },
+  { label = "w", keycode = 17 },
+  { label = "e", keycode = 18 }
+]
+
+# Row 4: RT + Alt
+[[row]]
+keys = [
+  { label = "r", keycode = 19 },
+  { label = "t", keycode = 20 },
+  { label = "Alt", keycode = 56 }
+]
+
+# Row 5: ASD
+[[row]]
+keys = [
+  { label = "a", keycode = 30 },
+  { label = "s", keycode = 31 },
+  { label = "d", keycode = 32 }
+]
+
+# Row 6: FG + Shift
+[[row]]
+keys = [
+  { label = "f", keycode = 33 },
+  { label = "g", keycode = 34 },
+  { label = "Shift", keycode = 42 }
+]
+
+# Row 7: ZXC
+[[row]]
+keys = [
+  { label = "z", keycode = 44 },
+  { label = "x", keycode = 45 },
+  { label = "c", keycode = 46 }
+]
+
+# Row 8: V + Layer switches
+[[row]]
+keys = [
+  { label = "v", keycode = 47 },
+  { label = "Sym", layer_switch = { layer = "Symbols", activation = "Toggle" } },
+  { label = "Nav", layer_switch = { layer = "Navigation", activation = "Hold" } }
+]
