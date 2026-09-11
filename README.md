@@ -16,31 +16,60 @@ A split on-screen keyboard designed for Hyprland (and other wlroots-based Waylan
 ## Requirements
 
 - Linux with Wayland compositor supporting wlr-layer-shell (Hyprland, Sway, etc.)
-- Rust toolchain (1.70+)
+- `libwayland-client` at runtime (the `wayland` package on Arch)
+- Read and write access to `/dev/uinput`, see [Setting up uinput permissions](#setting-up-uinput-permissions)
+- A current stable Rust toolchain to build. `Cargo.lock` is not committed, so dependencies resolve to their latest releases, which currently need Rust 1.87 or newer.
 
-## Building
+## Install
+
+### From source
 
 ```bash
+git clone https://github.com/blendonl/split-keyboard.git
 cd split-keyboard
 cargo build --release
-```
+sudo install -Dm755 target/release/split-keyboard /usr/local/bin/split-keyboard
 
-The binary will be located at `target/release/split-keyboard`.
-
-## Installation
-
-```bash
-# Build and install
-cargo build --release
-sudo cp target/release/split-keyboard /usr/local/bin/
-
-# Or install via cargo
+# Or install into ~/.cargo/bin
 cargo install --path .
 ```
 
+### Arch Linux (AUR)
+
+`packaging/aur/PKGBUILD` builds the `split-keyboard-git` package from the latest commit on `main`. Once it is published on the AUR, install it with an AUR helper:
+
+```bash
+yay -S split-keyboard-git
+```
+
+Until then, build it from a clone:
+
+```bash
+cd packaging/aur
+makepkg -si
+```
+
+The package installs the binary to `/usr/bin/split-keyboard`, the example `config.toml` and layer files to `/usr/share/split-keyboard/`, and the docs to `/usr/share/doc/split-keyboard/`.
+
+### Layer files
+
+The keyboard reads its layouts from `~/.config/split-keyboard/layers/` (`$XDG_CONFIG_HOME/split-keyboard/layers/` if set). Without layer files both halves start with an empty layout, so copy the examples first:
+
+```bash
+mkdir -p ~/.config/split-keyboard/layers
+
+# From a clone
+cp layers/*.toml ~/.config/split-keyboard/layers/
+
+# From the AUR package
+cp /usr/share/split-keyboard/layers/*.toml ~/.config/split-keyboard/layers/
+```
+
+`config.toml` is optional; built-in defaults are used when it is missing. See [Configuration](#configuration).
+
 ### Setting up uinput permissions
 
-The virtual keyboard uses Linux uinput to send keystrokes. You need to configure permissions:
+The virtual keyboard uses Linux uinput to send keystrokes, so your user needs read and write access to `/dev/uinput`. Without it the keyboard still appears, but prints `Failed to initialize virtual keyboard` and keys are not sent. You need to configure permissions:
 
 **Option 1: Temporary fix (until reboot)**
 ```bash
