@@ -2,6 +2,7 @@
 name = "split-keyboard"
 version = "0.1.0"
 edition = "2021"
+license = "MIT"
 
 [dependencies]
 wayland-client = "0.31"
